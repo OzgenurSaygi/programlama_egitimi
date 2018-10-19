@@ -1,0 +1,7 @@
+{
+  "name": "egitimApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
