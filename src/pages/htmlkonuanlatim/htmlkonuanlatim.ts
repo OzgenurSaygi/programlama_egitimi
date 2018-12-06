@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, List } from 'ionic-angular';
 
 /**
  * Generated class for the HtmlkonuanlatimPage page.
@@ -13,9 +13,9 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'htmlkonuanlatim.html',
 })
 export class HtmlkonuanlatimPage {
-  sayfa2 ?:any;
+  public sayfa2 :any;
   constructor(public navCtrl: NavController, 
-  private navParams: NavParams) {
+  public navParams: NavParams) {
   this.sayfa2=navParams.get('data2');
   }
 

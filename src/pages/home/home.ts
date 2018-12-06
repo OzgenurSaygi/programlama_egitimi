@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ListPage } from '../list/list';
-import { JskonuanlatimPage } from '../jskonuanlatim/jskonuanlatim';
+import { JslistePage } from '../jsliste/jsliste';
+import { CpluslistePage } from '../cplusliste/cplusliste';
 
 @Component({
   selector: 'page-home',
@@ -20,8 +21,11 @@ export class HomePage {
  }
 
  gosayfagit2 (gitsayfa){
-   this.navCtrl.push(JskonuanlatimPage, {
+   this.navCtrl.push(JslistePage, {
      gitsayfa:gitsayfa
    })
+ }
+ gosayfagit3(){
+  this.navCtrl.push(CpluslistePage)
  }
 }
