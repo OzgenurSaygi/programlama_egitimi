@@ -1,0 +1,31 @@
+
+<ion-header >
+  <ion-navbar color="danger" >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngIf="sayfamenu; else menubaslik" >{{sayfamenu.title}}</ion-title>
+    <ng-template #menubaslik> 
+    <ion-title >Örnek Uygulamalar</ion-title>
+    </ng-template>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color:rgb(248, 247, 194)">
+  <div ><img src="assets/imgs/baslik1.png" width="340" height="58" style="margin-top:0px"></div>
+  <ion-list style="background-color:rgb(248, 247, 194)">
+    <ion-item *ngFor="let htmlbaslik of htmlornekler" (click)="htmlornek(htmlbaslik)"style="color:#000; background-color:rgb(248, 247, 194); font-weight: bold "><img src="assets/imgs/elips.png" >{{htmlbaslik.title2}}</ion-item>
+  </ion-list>
+  <div style="padding-left:5px"><img src="assets/imgs/baslik2.png" width="300" height="58" ></div>
+  <ion-list style="background-color:rgb(248, 247, 194)">
+      <ion-item *ngFor="let jsbaslik of jsornekler" (click)="jsornek(jsbaslik)" style="color:#000; background-color:rgb(248, 247, 194) ; font-weight: bold "><img src="assets/imgs/elips2.png" >{{jsbaslik.title3}}</ion-item>    
+    </ion-list>
+    <div style="padding-left:5px"><img src="assets/imgs/baslik3.png" width="300" height="58" ></div>
+    <ion-list style="background-color:rgb(248, 247, 194)">
+        <ion-item *ngFor="let cbaslik of cplusornekler" (click)="cornek(cbaslik)" style="color:#000; background-color:rgb(248, 247, 194);font-weight: bold"><img src="assets/imgs/elips.png" >{{cbaslik.title4}}</ion-item>
+    </ion-list>
+  
+
+</ion-content>

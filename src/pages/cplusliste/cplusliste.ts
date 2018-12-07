@@ -28,7 +28,7 @@ export class CpluslistePage {
       component:CpluskonuPage
     },
     {
-      cpluskonu:"Arttırma Ve azaltma işlemleri",
+      cpluskonu:"Arttırma Ve Azaltma işlemleri",
       cplusicerik:"",
       component:CpluskonuPage
      },

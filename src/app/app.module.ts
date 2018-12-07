@@ -11,6 +11,13 @@ import{JslistePage} from '../pages/jsliste/jsliste';
 import{KonujsPage} from'../pages/konujs/konujs';
 import{CpluslistePage} from '../pages/cplusliste/cplusliste';
 import{CpluskonuPage} from '../pages/cpluskonu/cpluskonu';
+import{OrnekuygulamalarPage} from'../pages/ornekuygulamalar/ornekuygulamalar';
+import{HtmlorneklerPage}from'../pages/htmlornekler/htmlornekler';
+import{JsorneklerPage}from'../pages/jsornekler/jsornekler';
+import{CplusornekPage}from'../pages/cplusornek/cplusornek';
+import{KayitolPage}from'../pages/kayitol/kayitol';
+import{UsergirisPage}from'../pages/usergiris/usergiris';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,10 +28,17 @@ import{CpluskonuPage} from '../pages/cpluskonu/cpluskonu';
     JslistePage,
     KonujsPage,
     CpluslistePage,
-    CpluskonuPage
+    CpluskonuPage,
+    OrnekuygulamalarPage,
+    HtmlorneklerPage,
+    JsorneklerPage,
+    CplusornekPage,
+    KayitolPage,
+    UsergirisPage
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     IonicModule.forRoot(MyApp ,{
       backButtonText:'GERİ'
     }),
@@ -38,7 +52,14 @@ import{CpluskonuPage} from '../pages/cpluskonu/cpluskonu';
     JslistePage,
     KonujsPage,
     CpluslistePage,
-    CpluskonuPage
+    CpluskonuPage,
+    OrnekuygulamalarPage,
+    HtmlorneklerPage,
+    JsorneklerPage,
+    CplusornekPage,
+    KayitolPage,
+    UsergirisPage,
+
   ],
   providers: [
     StatusBar,

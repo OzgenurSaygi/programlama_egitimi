@@ -4,6 +4,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { OrnekuygulamalarPage } from '../pages/ornekuygulamalar/ornekuygulamalar';
+import { KayitolPage } from '../pages/kayitol/kayitol';
+import { UsergirisPage } from '../pages/usergiris/usergiris';
 
 @Component({
   templateUrl: 'app.html'
@@ -20,11 +23,11 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Sonuç Öğrenme', component: HomePage , category:"0"},
-      { title: 'Kayıt Ol', component: HomePage , category:"00"},
-      { title: 'Konu Anlatım', component: HomePage , category:"1"},
-      { title: 'Örnek Uygulamalar', component: HomePage , category:"2"},
-      { title: 'Kendini Test Et', component: HomePage , category:"3"}
+      { title: 'Sonuç Öğrenme', component: UsergirisPage, category:"0"},
+      { title: 'Kayıt Ol', component: KayitolPage , category:"1"},
+      { title: 'Konu Anlatım', component: HomePage , category:"2"},
+      { title: 'Örnek Uygulamalar', component:OrnekuygulamalarPage , category:"3"},
+      { title: 'Kendini Test Et', component: HomePage , category:"4"}
     ];
 
   }
