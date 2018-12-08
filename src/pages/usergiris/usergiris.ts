@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { KayitolPage } from '../kayitol/kayitol';
+import { SonucogrenPage } from '../sonucogren/sonucogren';
 
 /**
  * Generated class for the UsergirisPage page.
@@ -21,11 +22,12 @@ export class UsergirisPage {
     this.sayfamenu3=this.navParams.get('data');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad UsergirisPage');
-  }
   giris(){
-    
+    if(this.user_ad2=="özge" && this.sifre2=="123"){
+      this.navCtrl.push(SonucogrenPage,{
+        girisad:this.user_ad2
+      });
+    }
   }
   kayitsayfa(){
     this.navCtrl.push(KayitolPage);

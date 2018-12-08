@@ -18,6 +18,11 @@ import{CplusornekPage}from'../pages/cplusornek/cplusornek';
 import{KayitolPage}from'../pages/kayitol/kayitol';
 import{UsergirisPage}from'../pages/usergiris/usergiris';
 import { FormsModule } from '@angular/forms';
+import{SonucogrenPage} from '../pages/sonucogren/sonucogren';
+import{SinavlarPage}from'../pages/sinavlar/sinavlar';
+import{TestsinavPage}from'../pages/testsinav/testsinav';
+import{EkransinavPage}from'../pages/ekransinav/ekransinav';
+import{BosluksinavPage}from'../pages/bosluksinav/bosluksinav';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,12 @@ import { FormsModule } from '@angular/forms';
     JsorneklerPage,
     CplusornekPage,
     KayitolPage,
-    UsergirisPage
+    UsergirisPage,
+    SonucogrenPage,
+    SinavlarPage,
+    TestsinavPage,
+    EkransinavPage,
+    BosluksinavPage
   ],
   imports: [
     BrowserModule,
@@ -59,6 +69,11 @@ import { FormsModule } from '@angular/forms';
     CplusornekPage,
     KayitolPage,
     UsergirisPage,
+    SonucogrenPage,
+    SinavlarPage,
+    TestsinavPage,
+    EkransinavPage,
+    BosluksinavPage
 
   ],
   providers: [

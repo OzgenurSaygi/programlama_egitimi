@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { OrnekuygulamalarPage } from '../pages/ornekuygulamalar/ornekuygulamalar';
 import { KayitolPage } from '../pages/kayitol/kayitol';
 import { UsergirisPage } from '../pages/usergiris/usergiris';
+import { SinavlarPage } from '../pages/sinavlar/sinavlar';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,7 +28,7 @@ export class MyApp {
       { title: 'Kayıt Ol', component: KayitolPage , category:"1"},
       { title: 'Konu Anlatım', component: HomePage , category:"2"},
       { title: 'Örnek Uygulamalar', component:OrnekuygulamalarPage , category:"3"},
-      { title: 'Kendini Test Et', component: HomePage , category:"4"}
+      { title: 'Kendini Test Et', component: SinavlarPage , category:"4"}
     ];
 
   }
