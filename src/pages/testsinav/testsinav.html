@@ -6,14 +6,34 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="danger">
     <ion-title>{{gelen}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <div id="soru1"></div>
+<ion-content padding style="background-color:rgb(248, 247, 194) ">
+    <ion-list style="background-color:rgb(248, 247, 194) " no-lines>
+        <ion-item style="background-color:rgb(248, 247, 194) ; margin-bottom: 5px">
+        <ion-input placeholder="Kullanıcı Adı" [(ngModel)]="adi2" style="border: 2px solid darkred; border-radius:5px ;background-color: white"></ion-input>
+        </ion-item>
+        <ion-item style="background-color:rgb(248, 247, 194); margin-bottom: 5px">
+            <ion-input placeholder="Kullanıcı Soyadı" [(ngModel)]="soyad2"  style="border: 2px solid darkred ;  border-radius:5px ;background-color: white"></ion-input>
+          </ion-item>
+     </ion-list>
+   <ion-list style="background-color:rgb(248, 247, 194) ">
+     <ion-item *ngFor="let yaz of example1" style="background-color:rgb(248, 247, 194) "> 
+        <b>{{yaz.soru}}</b><br>
+        <button ion-button id="sec1" (click)="hesapla()" style="background-color:rgb(7, 7, 80); color: white; font-weight: bold">A</button>{{yaz.cevap1}}<br>
+        <button ion-button id="sec1" (click)="hesapla()" style="background-color:rgb(7, 7, 80); color: white; font-weight: bold">B</button>{{yaz.cevap2}}<br>
+        <button ion-button id="sec3" (click)="hesapla()" style="background-color:rgb(7, 7, 80); color: white; font-weight: bold">C</button>{{yaz.cevap3}}<br>
+        <button ion-button id="sec4" (click)="hesapla()"style="background-color:rgb(7, 7, 80); color: white; font-weight: bold">D</button>{{yaz.cevap4}}<br>
+      </ion-item>
+   </ion-list>
+   <div style="float: left;"><button ion-button round (click)="hesapla()" style="background-color:#FF3300">Bitir</button></div>
+   <div style=" float: left;"><button ion-button round (click)="hesapla()" style="background-color:#FF3300">Puan</button></div>
+   <div ><button ion-button round (click)="hesapla()" style="background-color:#FF3300">Kaydet</button></div>
+ <div id="soru1"></div>
 
 </ion-content>
