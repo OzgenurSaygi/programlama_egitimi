@@ -14,6 +14,7 @@
 
 
 <ion-content padding style="background-color:rgb(248, 247, 194) ">
+
 <ion-list style="background-color:rgb(248, 247, 194) " no-lines>
     <ion-item style="background-color:rgb(248, 247, 194) ; margin-bottom: 5px">
     <ion-input placeholder="Kullanıcı Adı" [(ngModel)]="adi3" style="border: 2px solid darkred; border-radius:5px ;background-color: white"></ion-input>
@@ -24,12 +25,14 @@
  </ion-list>
     <ion-list style="background-color:rgb(248, 247, 194) ">
         <ion-item *ngFor="let yaz2 of example2" style="background-color:rgb(248, 247, 194) "> 
+          <p>Kod parçacığı:</p>
            <img src="{{yaz2.soru}}" width="400px" height="200px"><br>
-          <div style="background-color:white ; width:400px; height:40px">{{yaz2.cevap1}}</div><br>
-          <div style="background-color:white; width:400px; height:40px">{{yaz2.cevap2}}</div><br>
+           <p style="font-weight:bold">Yukarıdaki kodun ekran çıktısı ne olur ?</p>
+           <button ion-button id="sec1"style="background-color:rgb(7, 7, 80); color: white; font-weight: bold">A</button><div style="background-color:white ; border: 1px solid darkred; padding: 5px ;width:400px; height:60px;overflow: scroll;">{{yaz2.cevap1}}</div><br>
+          <button ion-button id="sec1"style="background-color:rgb(7, 7, 80); color: white; font-weight: bold">B</button><div style="background-color:white; border: 1px solid darkred; padding: 5px ;width:400px; height:60px; overflow-y: scroll;overflow-x: hidden;">{{yaz2.cevap2}}</div><br>
          </ion-item>
       </ion-list>
-      <div style="float: left;"><button ion-button round (click)="hesapla2()" style="background-color:#FF3300">Bitir</button></div>
+      <div style="float: left; margin-left: 15px"><button ion-button round (click)="hesapla2()" style="background-color:#FF3300">Bitir</button></div>
    <div style=" float: left;"><button ion-button round (click)="hesapla2()" style="background-color:#FF3300">Puan</button></div>
    <div ><button ion-button round (click)="hesapla2()" style="background-color:#FF3300">Kaydet</button></div>
 

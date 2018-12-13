@@ -17,11 +17,11 @@ export class SonucogrenPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.girisad=this.navParams.get('girisad');
   }
-   
-  yazdir(){
-    document.getElementById('adi').innerHTML=this.girisad;
+  ionViewDidLoad() {
+      document.getElementById('adi').innerHTML=this.girisad;
     document.getElementById('soyadi').innerHTML="Saygı";
     document.getElementById('adi').style.padding='10px';
     document.getElementById('soyadi').style.padding='10px';
   }
+
 }
