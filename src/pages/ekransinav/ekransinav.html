@@ -28,14 +28,13 @@
           <p>Kod parçacığı:</p>
            <img src="{{yaz2.soru}}" width="400px" height="200px"><br>
            <p style="font-weight:bold">Yukarıdaki kodun ekran çıktısı ne olur ?</p>
-           <button ion-button id="sec1"style="background-color:rgb(7, 7, 80); color: white; font-weight: bold">A</button><div style="background-color:white ; border: 1px solid darkred; padding: 5px ;width:400px; height:60px;overflow: scroll;">{{yaz2.cevap1}}</div><br>
-          <button ion-button id="sec1"style="background-color:rgb(7, 7, 80); color: white; font-weight: bold">B</button><div style="background-color:white; border: 1px solid darkred; padding: 5px ;width:400px; height:60px; overflow-y: scroll;overflow-x: hidden;">{{yaz2.cevap2}}</div><br>
+           <button ion-button id="sec1" name="{{yaz2.cvp}}"(click)="hesapla2('A',yaz2.cvp)" style="background-color:rgb(7, 7, 80); color: white; font-weight: bold">A</button><div style="background-color:white ; border: 1px solid darkred; padding: 5px ;width:400px; height:60px;overflow: scroll;">{{yaz2.cevap1}}</div><br>
+          <button ion-button id="sec2" name="{{yaz2.cvp}}"(click)="hesapla2('B',yaz2.cvp)" style="background-color:rgb(7, 7, 80); color: white; font-weight: bold">B</button><div style="background-color:white; border: 1px solid darkred; padding: 5px ;width:400px; height:60px; overflow: scroll;">{{yaz2.cevap2}}</div><br>
          </ion-item>
       </ion-list>
-      <div style="float: left; margin-left: 15px"><button ion-button round (click)="hesapla2()" style="background-color:#FF3300">Bitir</button></div>
-   <div style=" float: left;"><button ion-button round (click)="hesapla2()" style="background-color:#FF3300">Puan</button></div>
-   <div ><button ion-button round (click)="hesapla2()" style="background-color:#FF3300">Kaydet</button></div>
-
-
+      <div style="float: left; margin-left: 15px"><button ion-button round (click)="hesapla2('bitis','')" style="background-color:#FF3300">Bitir</button></div>
+   <div style=" float: left;"><button ion-button round (click)="hesapla2('sonucyaz','')" style="background-color:#FF3300">Puan</button></div>
+   <div ><button ion-button round style="background-color:#FF3300">Kaydet</button></div>
   <div id="soru1"></div>
+  <div id="son"></div>
 </ion-content>
