@@ -15,6 +15,8 @@ import { NavController, NavParams } from 'ionic-angular';
 export class BosluksinavPage {
    public example3:any;
    public gelen3:string;
+   public bosluk2:string;
+   public bosluk1:string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.gelen3=this.navParams.get('sinav3');
   }
@@ -26,30 +28,38 @@ export class BosluksinavPage {
         soru1:"C++ kullanıcının veri girmesini sağlayan komut",
         soru2:"C++ da derleyiciye yazı yazdırmak için kullanılır" ,
         cevap:"std,cin,cout",
+        idisi:"s1",
+        idisi2:"s11"
 
       },
       {
         soru1:'C++ rastgele sayı üretmek için kullanlılan methotdur',
         soru2:"C++ bir alt satıra geçmek için kullaılır." ,
         cevap:"endl,tab,rand()",
-
+        idisi:"s2",
+        idisi2:"s12"
       },
       {
         soru1:"Komutu döngüden çıkmamızı sağlar",
         soru2:"C++ da verinin değeri değiştirilmesin diye kullanılır" ,
         cevap:"define,const,break",
-
+        idisi:"s3",
+        idisi2:"s13"
       },
       {
         soru1:"Döngüde iken bu komutdan sonra gelen cümleleri atlayarak, döngü başa döner",
         soru2:"Veri tiplerini kullanmadan kendi değişkenlerimizi oluşturmamızı sağlar" ,
         cevap:"contiune,break,define",
+        idisi:"s4",
+        idisi2:"s14"
 
       },
       {
         soru1:"C++ tam sayılar için kullanılan veri tipidir",
         soru2:"Karakteri temsil eder .Tek baytlık bir karakterdir." ,
         cevap:"char,int,string",
+        idisi:"s5",
+        idisi2:"s15"
 
       },]
    }
@@ -273,5 +283,18 @@ export class BosluksinavPage {
 
     console.log('ionViewDidLoad BosluksinavPage');
   }
-
+  hesapla3(gelen1,gelen2){
+       if(gelen2=="s1"){
+         if(gelen1=="std"){
+           document.getElementById('yaz').innerHTML="Aferin Doğru";
+         }
+        
+       }
+       else{
+        document.getElementById('yaz').innerHTML=" ";
+       }
+    }
+  yazdir(){
+   
+  }
 }
