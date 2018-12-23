@@ -16,6 +16,8 @@ export class TestsinavPage {
    public gelen:string;
    public example1:any;
    public cevap1:string;
+   public cv:string[];
+   public puan:number=0;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.gelen=this.navParams.get('sinav');
   }
@@ -29,7 +31,8 @@ export class TestsinavPage {
           cevap1:"Bir paragraflık bosluk bırakır",
           cevap2:"İmleç bir alt satıra geçer",
           cevap3:"Metni kalın yazar",
-          cevap4:"Metnin altını çizer"
+          cevap4:"Metnin altını çizer",
+          cvp:"s1"
 
         },
         {
@@ -37,7 +40,8 @@ export class TestsinavPage {
           cevap1:"En büyük başlık etiketidir.",
           cevap2:"Metni eğik yazar",
           cevap3:"En küçük baslik etiketidir.",
-          cevap4:"Metine üst çizgi çizer"
+          cevap4:"Metine üst çizgi çizer",
+          cvp:"s2"
 
         },
         {
@@ -45,7 +49,8 @@ export class TestsinavPage {
           cevap1:"Metni kalın yazmak için kullanılır",
           cevap2:"Madde işareti koymak için kullanılır",
           cevap3:"Metninin üstünü çizer",
-          cevap4:"Metni eğik yazar"
+          cevap4:"Metni eğik yazar",
+          cvp:"s3"
 
         },
         {
@@ -53,7 +58,8 @@ export class TestsinavPage {
           cevap1:"Sayfa içindeki metinlerin tarayıcıda nasıl görüneceğini ve işlevsel olacağını düzenleyen işaret dilidir.",
           cevap2:"Diğer sayfaları bağlayan linkler",
           cevap3:"Nesneyi bağlayan linkler",
-          cevap4:"Programlama dili"
+          cevap4:"Programlama dili",
+          cvp:"s4"
 
         },
         {
@@ -61,7 +67,8 @@ export class TestsinavPage {
           cevap1:" < >  ",
           cevap2:"# #",
           cevap3:"{ } ",
-          cevap4:"“ “"
+          cevap4:"“ “",
+          cvp:"s5"
 
         },
         {
@@ -69,7 +76,8 @@ export class TestsinavPage {
           cevap1:"<body>",
           cevap2:"<html>",
           cevap3:"<head>",
-          cevap4:"<title>"
+          cevap4:"<title>",
+          cvp:"s6"
 
         },
         {
@@ -77,7 +85,8 @@ export class TestsinavPage {
           cevap1:"<a>",
           cevap2:"<li>",
           cevap3:"<img>",
-          cevap4:"<div>"
+          cevap4:"<div>",
+          cvp:"s7"
 
         },
         {
@@ -85,7 +94,8 @@ export class TestsinavPage {
           cevap1:"height",
           cevap2:"width ",
           cevap3:"left",
-          cevap4:"top"
+          cevap4:"top",
+          cvp:"s8"
 
         },
         {
@@ -93,7 +103,8 @@ export class TestsinavPage {
           cevap1:"border",
           cevap2:"width ",
           cevap3:"height",
-          cevap4:"align"
+          cevap4:"align",
+          cvp:"s9"
 
         },
         {
@@ -101,7 +112,8 @@ export class TestsinavPage {
           cevap1:" <body color=”blue”>",
           cevap2:" <body bgcolor=”blue”> ",
           cevap3:"<body background=”blue”>",
-          cevap4:"<body set=”blue”>"
+          cevap4:"<body set=”blue”>",
+          cvp:"s10"
 
         },
       ]
@@ -612,9 +624,93 @@ export class TestsinavPage {
       document.getElementById('soru1').innerHTML="Sınav 2 dir";
     }
   }
-  hesapla(){
-      document.getElementById('sec1').style.backgroundColor="red";
+  hesapla(degeri,degeri2){
+    var dogru=0,yanlis,giren=0;
+    var puan =10;
+    if(degeri2=="s1"){
+     if(degeri=="B"){
+      (this.puan)=(this.puan)+10;
+     }
+     else{
+       yanlis++;
+     }
+    }
+    else if(degeri2=="s2"){
+      if(degeri=="A"){
+        (this.puan)=(this.puan)+10;
+      }
+      else{
+        yanlis++;
+      }
+     }
+     else if(degeri2=="s3"){
+      if(degeri=="C"){
+        (this.puan)=(this.puan)+10;
+      }
+      else{
+        yanlis++;
+      }
+     }
+     else if(degeri2=="s4"){
+      if(degeri=="A"){
+        (this.puan)=(this.puan)+10;
+      }
+      else{
+        yanlis++;
+      }
+     }
+     else if(degeri2=="s5"){
+      if(degeri=="A"){
+        (this.puan)=(this.puan)+10;
+      }
+      else{
+        yanlis++;
+      }
+     }
+     else if(degeri2=="s6"){
+      if(degeri=="D"){
+        (this.puan)=(this.puan)+10;
+      }
+      else{
+        yanlis++;
+      }
+     }
+     else if(degeri2=="s7"){
+      if(degeri=="A"){
+        (this.puan)=(this.puan)+10;
+      }
+      else{
+        yanlis++;
+      }
+     }
+     else if(degeri2=="s8"){
+      if(degeri=="B"){
+     (this.puan)=(this.puan)+10;
+      }
+      else{
+        yanlis++;
+      }
+     }
+     else if(degeri2=="s9"){
+      if(degeri=="A"){
+       (this.puan)=(this.puan)+10;
+      }
+      else{
+        yanlis++;
+      }
+     }
+     else if(degeri2=="s10"){
+      if(degeri=="B"){
+       (this.puan)=(this.puan)+10;
+      }
+      else{
+        yanlis++;
+      }
+     }
+     if(degeri=="sonucyaz"){
+     document.getElementById("son").innerHTML="Puanı:"+this.puan;
+    }
+     
+    }
     
-  }
-
 }
