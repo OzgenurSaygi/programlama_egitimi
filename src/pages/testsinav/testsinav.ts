@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { UsergirisPage } from '../usergiris/usergiris';
 
 /**
  * Generated class for the TestsinavPage page.
@@ -19,6 +20,7 @@ export class TestsinavPage {
    public adi2:string;
    public soyad2:string;
    public puan:number=0;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.gelen=this.navParams.get('sinav');
   }
@@ -764,11 +766,19 @@ export class TestsinavPage {
      }
      if(degeri=="sonucyaz"){
      document.getElementById("son").innerHTML=this.adi2+" "+this.soyad2+" Puanı:"+this.puan;
+
     }
      if(degeri=="bitis"){
       document.getElementById('soru1').innerHTML="Sınav başarı ile tamamlandı.";
      }
      
+    }
+    kaydet(){
+      this.navCtrl.push(UsergirisPage,{
+       puangonder:this.puan,
+       soyadgonder:this.soyad2
+        
+      })
     }
     
 }

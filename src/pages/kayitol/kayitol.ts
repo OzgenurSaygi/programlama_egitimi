@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { UsergirisPage } from '../usergiris/usergiris';
 
 /**
  * Generated class for the KayitolPage page.
@@ -24,7 +25,13 @@ export class KayitolPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad KayitolPage');
   }
-  kaydet(){}
+  kaydet(){
+      this.navCtrl.push(UsergirisPage,{
+        gonderusad:this.user_ad,
+        gondersifre:this.sifre,
+        gonderussoyad:this.user_soyad
+      })    
+  }
   temizle(){
     document.getElementById('metin').innerHTML=" ";
   }

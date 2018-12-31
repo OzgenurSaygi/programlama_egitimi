@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { UsergirisPage } from '../usergiris/usergiris';
 
 /**
  * Generated class for the EkransinavPage page.
@@ -339,6 +340,13 @@ export class EkransinavPage {
         if(degeri=="bitis"){
          document.getElementById('soru1').innerHTML="Ekran çıktısı sınavı başarı ile tamamlandı.";
         }
+  }
+  kaydet(){
+    this.navCtrl.push(UsergirisPage,{
+     puangonder:this.puan,
+     soyadgonder:this.soyad3
+      
+    })
   }
 
 }
